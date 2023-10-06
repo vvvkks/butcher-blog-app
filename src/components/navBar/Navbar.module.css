@@ -1,0 +1,41 @@
+.navbar {
+    background-color: white;
+    color: black;
+    padding: -10px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h4 {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 24px;
+    text-align: center;
+}
+a {
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 20px;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+}
+
+.links ul li {
+    margin-right: 20px;
+}
+
+.links ul li:last-child {
+    margin-right: 0;
+}
+
+.links ul li a {
+    color: black;
+    text-decoration: none;
+}
