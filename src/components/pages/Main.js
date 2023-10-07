@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Home.module.css"
-const Home = () => {
+const Main = () => {
     return (
         <div className={s.homePage}>
             <div className={s.posts}>
@@ -21,4 +21,4 @@ const Home = () => {
     );
 };
 
-export default Home
+export default Main

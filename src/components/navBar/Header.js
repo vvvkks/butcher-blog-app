@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./Navbar.module.css"
 
-const Navbar = () => {
+const Header = () => {
     return (
         <div className={s.navbar}>
             <div className={s.container}>
@@ -21,4 +21,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Header

@@ -1,12 +1,12 @@
-import Navbar from "./components/navBar/Navbar";
-import Home from "./components/pages/Home";
+import Header from "./components/navBar/Header";
+import Main from "./components/pages/Main";
 import Footer from "./components/footer/Footer";
 
 function App() {
     return (
         <div>
-            <Navbar />
-            <Home />
+            <Header />
+            <Main />
             <Footer />
         </div>
     );
