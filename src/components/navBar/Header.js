@@ -1,24 +1,21 @@
 import React from "react";
+import s from "./Header.module.css"
 
 const Header = () => {
     return (
-        <header>
-            <div className={"navbar"}>
-                <div className={"container"}>
-                    <div className={"logo"}>
-                        <h1>Butcher Without Acid Blog</h1>
-                    </div>
-                    <div className={"links"}>
-                        <nav>
-                            <ul>
-                                <li><a href="/Login">Login</a></li>
-                                <li><a href="/Register">Register</a></li>
-                            </ul>
-                        </nav>
-                    </div>
+        <div className={s.navbar}>
+            <div className={s.container}>
+                    <h4>butcher without acid <br/><span className="blog">blog</span></h4>
+                <div className={s.links}>
+                    <nav>
+                        <ul>
+                            <li><a href="/Write">Create new post</a></li>
+                            <li><a href="/Logout">Logout(vvvkks)</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-        </header>
+        </div>
     )
 }
 

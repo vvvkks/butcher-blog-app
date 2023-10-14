@@ -1,22 +1,15 @@
 import React from "react";
+import s from "./Footer.module.css";
 
 const Footer = () => {
     return (
-        <footer>
-            <blockquote>
-                <p><em>Господи, пускай в 2018 году снизят цены на рыболовные снасти</em></p>
-                <p>- Виктория Курилова</p>
-            </blockquote>
-            <section>
-                <h2>Формула успеха</h2>
-                <p>Успех = <sup>Только мы сами можем ловить кринж с себя </sup>&frasl;<sub>Вы не можете.</sub></p>
-            </section>
-            <pre>
-                        <code>
-                            console.log("Не верущие в Бога такие: ЭЭЭ Должно быть этот блог ведет учёный")
-                        </code>
-                    </pre>
+        <footer className={s.footer}>
+            <span>You can be my sponsor! Feel free to reach out on Telegram: <a href="https://t.me/kkkvvs">@kkkvvs</a></span>
+            <div className={s.someText}>
+                <p>Thanks for visiting! Don't forget to bring your money.</p>
+            </div>
         </footer>
-    )
-}
-export default Footer
+    );
+};
+
+export default Footer;
