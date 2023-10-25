@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-.homePage{
-    margin-top: 200px;
-}
 .posts {
     margin-top: 50px;
     display: flex;
@@ -9,6 +6,7 @@
     gap: 100px;
 }
 .post {
+    margin-top: 90px;
     display: flex;
     gap: 50px;
     flex: 1;
@@ -59,7 +57,12 @@ body {
 .content button:hover {
     background-color: #0056b3;
 }
+.tableContainer {
+    position: relative;
+}
 .table {
+    position: absolute;
+    top: 100%;
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
