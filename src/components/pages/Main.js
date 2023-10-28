@@ -35,7 +35,7 @@ const Main = () => {
                         </thead>
                         <tbody>
                         {tableData.map((row, index) => (
-                            <tr key={row.id} className={index % 2 === 0 ? s.evenRow : s.oddRow}>
+                            <tr key={row.id}>
                                 <td>{row.id}</td>
                                 <td>{row.name}</td>
                                 <td>{row.donation}</td>
