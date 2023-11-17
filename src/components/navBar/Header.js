@@ -1,18 +1,21 @@
 import React from "react";
 import s from "./Header.module.css"
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     return (
         <div className={s.navbar}>
             <div className={s.container}>
-                    <h4>butcher without acid <br/><span className="blog">blog</span></h4>
+                <NavLink to="/" className={s.title}>
+                    butcher without acid <br/>
+                    <span className="blog">blog</span>
+                </NavLink>
                 <div className={s.links}>
-                    <nav>
-                        <ul>
-                            <li><a href="/Write">Create new post</a></li>
-                            <li><a href="/Logout">Logout(vvvkks)</a></li>
-                        </ul>
-                    </nav>
+                    <div>
+                        <NavLink to="/write" className={s.link}>Create new post</NavLink>
+                        <NavLink to="/login" className={s.link}>Login</NavLink>
+                        <NavLink to="/register" className={s.link}>Register</NavLink>
+                    </div>
                 </div>
             </div>
         </div>
