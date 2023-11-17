@@ -1,7 +1,7 @@
 .navbar {
     background-color: white;
     color: black;
-    padding: -10px 0;
+    padding: 10px 0;
     position: fixed;
     z-index: 1000;
     margin-top: -40px;
@@ -16,32 +16,29 @@
     align-items: center;
 }
 
-h4 {
+.title {
     font-family: 'Jolly Lodger', cursive;
     font-size: 24px;
     text-align: center;
+    color: black;
+    text-decoration: none;
 }
-a {
+.link {
     font-family: 'Jolly Lodger', cursive;
     font-size: 20px;
-}
-
-.links ul {
-    list-style: none;
-    display: flex;
-}
-
-.links ul li {
+    color: black;
+    text-decoration: none;
     margin-right: 20px;
 }
 
-.links ul li:last-child {
-    margin-right: 0;
+.links {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
 }
 
-.links ul li a {
-    color: black;
-    text-decoration: none;
+.links:last-child {
+    margin-right: 0;
 }
 @media screen and (max-width: 768px) {
     .navbar{
