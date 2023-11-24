@@ -2,11 +2,6 @@ import React from "react";
 import s from "./Main.module.css"
 
 const Main = () => {
-    const tableData = [
-        {id: 1, name: "Alex", donation: "8000$"},
-        {id: 2, name: "Tom", donation: "5000$"},
-        {id: 3, name: "Pavel", donation: "5000$"}
-    ]
     return (
         <div className={s.homePage}>
             <div className={s.posts}>
@@ -27,26 +22,6 @@ const Main = () => {
                             <br/>Для себя я выделила несколько категорий, в которые входят реально все парни....</p>
                         <button>Read More</button>
                     </div>
-                </div>
-                <div className={s.tableContainer}>
-                    <table className={s.table}>
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Donation</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {tableData.map((row, index) => (
-                            <tr key={row.id}>
-                                <td>{row.id}</td>
-                                <td>{row.name}</td>
-                                <td>{row.donation}</td>
-                            </tr>
-                        ))}
-                        </tbody>
-                    </table>
                 </div>
             </div>
         </div>
