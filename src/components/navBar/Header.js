@@ -1,8 +1,9 @@
 import React from "react";
 import s from "./Header.module.css"
-import {NavLink} from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+    const location = useLocation();
     return (
         <div className={s.navbar}>
             <div className={s.container}>
@@ -12,9 +13,15 @@ const Header = () => {
                 </NavLink>
                 <div className={s.links}>
                     <div>
-                        <NavLink to="/write" className={s.link}>Create new post</NavLink>
-                        <NavLink to="/login" className={s.link}>Login</NavLink>
-                        <NavLink to="/register" className={s.link}>Register</NavLink>
+                        <NavLink to="/create" className={`${s.link} ${location.pathname === '/create' && s.active}`}>
+                            Create new post
+                        </NavLink>
+                        <NavLink to="/login" className={`${s.link} ${location.pathname === '/login' && s.active}`}>
+                            Login
+                        </NavLink>
+                        <NavLink to="/register" className={`${s.link} ${location.pathname === '/register' && s.active}`}>
+                            Register
+                        </NavLink>
                     </div>
                 </div>
             </div>
@@ -22,4 +29,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;
