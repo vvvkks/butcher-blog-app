@@ -1,22 +1,32 @@
 import React from "react";
 import s from "./Header.module.css"
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = () => {
+    const location = useLocation();
     return (
         <div className={s.navbar}>
             <div className={s.container}>
-                    <h4>butcher without acid <br/><span className="blog">blog</span></h4>
+                <NavLink to="/" className={s.title}>
+                    butcher without acid <br/>
+                    <span className="blog">blog</span>
+                </NavLink>
                 <div className={s.links}>
-                    <nav>
-                        <ul>
-                            <li><a href="/Write">Create new post</a></li>
-                            <li><a href="/Logout">Logout(vvvkks)</a></li>
-                        </ul>
-                    </nav>
+                    <div>
+                        <NavLink to="/create" className={`${s.link} ${location.pathname === '/create' && s.active}`}>
+                            Create new post
+                        </NavLink>
+                        <NavLink to="/login" className={`${s.link} ${location.pathname === '/login' && s.active}`}>
+                            Login
+                        </NavLink>
+                        <NavLink to="/register" className={`${s.link} ${location.pathname === '/register' && s.active}`}>
+                            Register
+                        </NavLink>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Header
+export default Header;

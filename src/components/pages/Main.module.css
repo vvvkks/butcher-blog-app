@@ -6,7 +6,7 @@
     gap: 100px;
 }
 .post {
-    margin-top: 90px;
+    margin-top: 150px;
     display: flex;
     gap: 50px;
     flex: 1;
@@ -43,6 +43,18 @@ body {
     font-size: 18px;
     line-height: 1.5;
 }
+.info {
+    margin: 4px 0;
+    color: #888;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    gap: 5px;
+}
+.author {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+}
 
 
 .content button {
@@ -55,38 +67,7 @@ body {
 }
 
 .content button:hover {
-    background-color: #0056b3;
-}
-.tableContainer {
-    position: relative;
-    margin-bottom: 20px;
-}
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.table th, .table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-.table th {
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-}
-.table tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.table tbody tr:nth-child(odd) {
-    background-color: #ffffff;
-}
-
-.table tbody tr:hover {
-    background-color: #6c757d;
+    background-color: #FF1493;
 }
 
 @media screen and (max-width: 1200px) {
