@@ -13,6 +13,9 @@ const Header = () => {
                 </NavLink>
                 <div className={s.links}>
                     <div>
+                        <NavLink to="/todolist" className={`${s.link} ${location.pathname === '/todolist' && s.active}`}>
+                            To do list
+                        </NavLink>
                         <NavLink to="/create" className={`${s.link} ${location.pathname === '/create' && s.active}`}>
                             Create new post
                         </NavLink>
