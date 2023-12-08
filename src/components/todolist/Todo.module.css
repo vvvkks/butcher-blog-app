@@ -1,0 +1,36 @@
+.todoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.todoRow:hover {
+    background-color: #f5f5f5;
+}
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.deleteIcon,
+.editIcon {
+    cursor: pointer;
+    font-size: 20px;
+    color: #757575;
+    transition: color 0.3s;
+}
+
+.deleteIcon:hover,
+.editIcon:hover {
+    color: #C71585;
+}

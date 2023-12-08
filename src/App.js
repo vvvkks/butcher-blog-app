@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Login from "./components/pages/Login";
 import Register from "./components/pages/Register";
 import CreatePost from "./components/pages/CreatePost";
+import TodoList from "./components/todolist/TodoList";
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route exact path='/login' element={<Login />} />
                 <Route exact path='/register' element={<Register />} />
                 <Route exact path='/create' element={<CreatePost />} />
+                <Route exact path='/todolist' element={<TodoList />} />
             </Routes>
             <Footer />
         </div>
