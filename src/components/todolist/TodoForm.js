@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef, useCallback} from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import s from './TodoForm.module.css';
 
 function TodoForm(props) {
@@ -20,7 +20,7 @@ function TodoForm(props) {
 
             props.onSubmit({
                 id: Math.floor(Math.random() * 10000),
-                text: input,
+                title: input,
             });
             setInput('');
         },
@@ -35,7 +35,7 @@ function TodoForm(props) {
                         placeholder='Update your item'
                         value={input}
                         onChange={handleChange}
-                        name='text'
+                        name='title'
                         ref={inputRef}
                         className={`${s.todoInput} ${s.edit}`}
                     />
@@ -49,12 +49,12 @@ function TodoForm(props) {
                         placeholder='Add a todo'
                         value={input}
                         onChange={handleChange}
-                        name='text'
+                        name='title'
                         className={s.todoInput}
                         ref={inputRef}
                     />
                     <button onClick={handleSubmit} className={s.todoButton}>
-                        Add todo
+                        Add
                     </button>
                 </>
             )}
