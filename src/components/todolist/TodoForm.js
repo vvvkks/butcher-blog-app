@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, {useState, useEffect, useRef, useCallback} from 'react';
 import s from './TodoForm.module.css';
 
 function TodoForm(props) {
@@ -10,19 +10,22 @@ function TodoForm(props) {
         inputRef.current.focus();
     }, []);
 
-    const handleChange = e => {
+    const handleChange = useCallback((e) => {
         setInput(e.target.value);
-    };
+    }, []);
 
-    const handleSubmit = e => {
-        e.preventDefault();
+    const handleSubmit = useCallback(
+        (e) => {
+            e.preventDefault();
 
-        props.onSubmit({
-            id: Math.floor(Math.random() * 10000),
-            text: input
-        });
-        setInput('');
-    };
+            props.onSubmit({
+                id: Math.floor(Math.random() * 10000),
+                text: input,
+            });
+            setInput('');
+        },
+        [input, props.onSubmit]
+    );
 
     return (
         <form onSubmit={handleSubmit} className={s.todoForm}>

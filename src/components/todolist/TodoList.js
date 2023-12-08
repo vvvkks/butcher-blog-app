@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useCallback, useState} from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
 import s from './TodoList.module.css';
@@ -6,40 +6,50 @@ import s from './TodoList.module.css';
 function TodoList() {
     const [todos, setTodos] = useState([]);
 
-    const addTodo = todo => {
-        if (!todo.text || /^\s*$/.test(todo.text)) {
-            return;
-        }
-
-        const newTodos = [todo, ...todos];
-
-        setTodos(newTodos);
-        console.log(...todos);
-    };
-
-    const updateTodo = (todoId, newValue) => {
-        if (!newValue.text || /^\s*$/.test(newValue.text)) {
-            return;
-        }
-
-        setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
-    };
-
-    const removeTodo = id => {
-        const removedArr = [...todos].filter(todo => todo.id !== id);
-
-        setTodos(removedArr);
-    };
-
-    const completeTodo = id => {
-        let updatedTodos = todos.map(todo => {
-            if (todo.id === id) {
-                todo.isComplete = !todo.isComplete;
+    const addTodo = useCallback(
+        (todo) => {
+            if (!todo.text || /^\s*$/.test(todo.text)) {
+                return;
             }
-            return todo;
-        });
-        setTodos(updatedTodos);
-    };
+
+            setTodos((prevTodos) => [todo, ...prevTodos]);
+        },
+        [setTodos]
+    );
+
+    const updateTodo = useCallback(
+        (todoId, newValue) => {
+            if (!newValue.text || /^\s*$/.test(newValue.text)) {
+                return;
+            }
+
+            setTodos((prevTodos) =>
+                prevTodos.map((item) => (item.id === todoId ? newValue : item))
+            );
+        },
+        [setTodos]
+    );
+
+    const removeTodo = useCallback(
+        (id) => {
+            setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
+        },
+        [setTodos]
+    );
+
+    const completeTodo = useCallback(
+        (id) => {
+            setTodos((prevTodos) =>
+                prevTodos.map((todo) => {
+                    if (todo.id === id) {
+                        todo.isComplete = !todo.isComplete;
+                    }
+                    return todo;
+                })
+            );
+        },
+        [setTodos]
+    );
 
     return (
         <div className={s.todoListContainer}>
