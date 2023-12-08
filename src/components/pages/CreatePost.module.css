@@ -23,27 +23,21 @@
 }
 
 .createForm input,
-.createForm textarea,
-.createForm button {
-    padding: 10px;
+.createForm textarea {
     margin-bottom: 15px;
+}
+
+.createForm textarea {
+    resize: vertical;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
 }
 
-.createForm textarea {
-    resize: vertical;
-}
-
 .createForm button {
     background-color: #FF1493;
-    color: #fff;
-    border: none;
-    padding: 12px;
-    font-size: 16px;
     cursor: pointer;
-    border-radius: 4px;
     transition: background-color 0.3s ease;
 }
 
