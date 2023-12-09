@@ -21,9 +21,7 @@
     display: flex;
     gap: 10px;
 }
-
-.deleteIcon,
-.editIcon {
+.deleteIcon{
     cursor: pointer;
     font-size: 20px;
     color: #757575;
@@ -31,6 +29,6 @@
 }
 
 .deleteIcon:hover,
-.editIcon:hover {
+.completeButton:hover{
     color: #C71585;
 }
