@@ -25,6 +25,9 @@ const Header = () => {
                         <NavLink to="/register" className={`${s.link} ${location.pathname === '/register' && s.active}`}>
                             Register
                         </NavLink>
+                        <NavLink to="/kitty" className={`${s.link} ${location.pathname === '/register' && s.active}`}>
+                            Kitty
+                        </NavLink>
                     </div>
                 </div>
             </div>
